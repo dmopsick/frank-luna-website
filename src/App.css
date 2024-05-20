@@ -1,0 +1,165 @@
+
+@keyframes arrow-jump {
+  0%   { opacity: 0;}
+  100% { opacity: 1; 
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    }  
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+h1, h2, h3, h4, h5, h5 {
+  font-family: "Bebas Neue" !important;
+  font-weight: bold !important;
+}
+
+p, a, label, span, li {
+  font-family: "Varta" !important;
+}
+
+.infoList {
+  text-align: left;
+  width: 85%;
+  margin: auto;
+  font-size: 18px;
+}
+
+.infoListItem {
+  margin-bottom: 5px;
+}
+
+.sectionHeader {
+  font-size: 48px;
+  margin: auto;
+  text-align: center;
+  width: 96%;
+}
+
+.sectionSubheader {
+  font-size: 32px;
+  margin: auto;
+  text-align: center;
+  width: 98%;
+}
+
+.sectionCaption {
+  font-size: 22px;
+  width: 90%;
+  margin: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.section {
+  height: 850px;
+}
+
+.longSection {
+  height: 1200px;
+}
+
+.bodyText {
+  margin: auto;
+  width: 85%;
+}
+
+.largeBodyText {
+  margin: auto;
+  width: 85%;
+  font-size: 17px;
+}
+
+a {
+  color: skyblue
+}
+
+.pageContainer {
+  padding-top: 100px;
+  color: white;
+}
+
+.redBackground {
+  background-color: #a7171a;
+}
+
+.linkNoDecoration {
+  color: rgb(0, 0, 0, 0.87);
+  text-decoration: none;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.socialIconContainer {
+  flex-basis: 25%;
+  text-align: center;
+  margin: auto;
+}
+
+.socialIconLink {
+  color: white;
+}
+
+.marginTop {
+  margin-top: 25px;
+}
+
+.marginBottom {
+  margin-bottom: 25px;
+}
+
+.paddingBottom {
+  padding-bottom: 55px;
+}
+
+.button {
+  font-size: 2rem !important;
+  margin: 50px !important;
+  /* background-color: #a7171a !important; */
+}
+
+/* Homepage slideshow */
+
+.sectionWithBackgroundImage {
+  display: none;
+  height: 825px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 80%;
+ 
+} 
+
+#outpostWithFlagSlide {
+  display: block;
+  background-image: url('/public/images/outpostWithFlag.jpg');
+}
+
+#olympicPadsSlide {
+  background-image: url('/public/images/olympicPads.jpg');
+}
+
+#squatRacksSlide {
+  background-image: url('/public/images/squatRacks.jpg');
+}
+
+#turfSlide {
+  background-image: url('/public/images/turf.jpg');
+}
+
+#smallOutpostSlide {
+  background-image: url('/public/images/smallOutpost.jpg');
+}
+
+#largeOutpostSlide {
+  background-image: url('/public/images/largeOutpost.jpg');
+}
+
+
