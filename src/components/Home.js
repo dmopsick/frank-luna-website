@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Home() {
     const classes = useStyles();
-    
+
     useEffect(() => {
         var myIndex = 1; // Holds place in the slideshow
 
@@ -78,12 +78,12 @@ export default function Home() {
     return (
         <div className={classes.homeContainer}>
             <div className="section">
-                <div id="outpostWithFlagSlide" className='sectionWithBackgroundImage'>
+                <div id="mariano-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
 
                         <div class={classes.landingPageLogoContainer}>
                             <img src="/logo1200.png"
-                                alt="Outpost Jersey Shore Logo Logo"
+                                alt="Frank Luna Logo"
                                 className={classes.landingPageLogo}
                             />
 
@@ -100,11 +100,11 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div id="turfSlide" className='sectionWithBackgroundImage'>
+                <div id="boone-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
                         <div class={classes.landingPageLogoContainer}>
                             <img src="/logo1200.png"
-                                alt="Outpost Jersey Shore Logo Logo"
+                                alt="Frank Luna Logo"
                                 className={classes.landingPageLogo}
                             />
 
@@ -121,11 +121,11 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div id="largeOutpostSlide" className='sectionWithBackgroundImage'>
+                <div id="paul-oneil-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
                         <div class={classes.landingPageLogoContainer}>
                             <img src="/logo1200.png"
-                                alt="Outpost Jersey Shore Logo Logo"
+                                alt="Frank Luna Logo"
                                 className={classes.landingPageLogo}
                             />
 
@@ -142,11 +142,11 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div id="squatRacksSlide" className='sectionWithBackgroundImage'>
+                <div id="oswaldo-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
                         <div class={classes.landingPageLogoContainer}>
                             <img src="/logo1200.png"
-                                alt="Outpost Jersey Shore Logo Logo"
+                                alt="Frank Luna Logo"
                                 className={classes.landingPageLogo}
                             />
 
@@ -163,11 +163,11 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div id="olympicPadsSlide" className='sectionWithBackgroundImage'>
+                <div id="elijah-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
                         <div class={classes.landingPageLogoContainer}>
                             <img src="/logo1200.png"
-                                alt="Outpost Jersey Shore Logo Logo"
+                                alt="Frank Luna Logo"
                                 className={classes.landingPageLogo}
                             />
 
@@ -183,45 +183,14 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-
-                <div id="smallOutpostSlide" className='sectionWithBackgroundImage'>
-                    <div className={classes.movingArrowContainer}>
-                        <div class={classes.landingPageLogoContainer}>
-                            <img src="/logo1200.png"
-                                alt="Outpost Jersey Shore Logo Logo"
-                                className={classes.landingPageLogo}
-                            />
-
-                            <Link to="section2"
-                                smooth={true}
-                                duration={500}
-                                style={{
-                                    color: "white",
-                                    flexBasis: "100%"
-                                }}>
-                                <ArrowDownwardIcon className={classes.movingArrow} style={{ fontSize: "96px" }} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <div id="section2" className='section'>
-                <h1 className='sectionHeader'>Outpost Jersey Shore</h1>
+            <div id="section2" className='longSection'>
+                <h1 className='sectionHeader'>Meet Frank Luna</h1>
                 <p className='sectionCaption'>
-                    Outpost Jersey Shore is a 24/7-365 day Strength and Conditioning Facility located in Monmouth County.
-                    With flexible membership options, and availability of space and time slots for trainers and other fitness professionals,
-                    Outpost is the Jersey Shore's fitness and performance hub. Packed into our garage gym set up is everything you need for a killer workout, including:
+                    Frank Luna, who owns and operates Upstage Strategies LLC, has spent his entire adult life working on campaigns and building community.
+                    His career has included multiple successful political campaigns, a few years as an Infantryman in the Army National Guard, bartending along the Jersey Shore, partnering in Outpost Jersey Shore – a strength and conditioning facility in Monmouth County, and coordinating hundreds of thousands of dollars in successful events with professional athletes and public figures. Not only is Frank a successful public affairs professional, but he gives back to the community relentlessly, volunteering with Jersey Shore Dream Center, Covenant House New Jersey, and the New Jersey Vietnam Veterans’ Memorial Foundation. Frank has recently received awards and recognition from the Asbury Park Little League, Long Branch Little League, Court Appointed Special Advocates for Children (CASA) of Middlesex County, and the Vin Gopal Civic Association ("2022 Community Trailblazers Award").
                 </p>
-
-                <ul className='infoList'>
-                    <li className='infoListItem'>3 Squat Racks</li>
-                    <li className='infoListItem'>2 Deadlift Platforms</li>
-                    <li className='infoListItem'>Nearly 30 yards of turf for carries, drags, and other athletic/functional movements</li>
-                    <li className='infoListItem'>Sleds, kettlebells, Farmer's Carry bars and other fun “odd object” implements to spice up a training routine</li>
-                    <li className='infoListItem'>A group of awesome people that make up the heart and soul of our space.</li>
-                </ul>
 
                 <Link to="training"
                     smooth={true}
@@ -236,23 +205,23 @@ export default function Home() {
             </div>
 
             <div id="training" className='section'>
-                <h1 className='sectionHeader'>Join our community</h1>
+                <h1 className='sectionHeader'>Connect with Frank</h1>
 
                 <Button className='button'
                     target="_blank"
                     variant="contained"
                     size="large"
                     href="https://theoutpost.gymmasteronline.com/portal/signup">
-                    SIGN UP
+                    Join Email List
                 </Button>
 
                 <Button className='button'
                     target="_blank"
-                    
+
                     variant="contained"
                     size="large"
                     href="https://forms.gle/ARkPTHWgBxu76Pny7">
-                    LEARN MORE
+                    Contact Frank
                 </Button>
             </div>
         </div>

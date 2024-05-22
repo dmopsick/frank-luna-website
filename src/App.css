@@ -1,24 +1,36 @@
-
 @keyframes arrow-jump {
-  0%   { opacity: 0;}
-  100% { opacity: 1; 
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
     -webkit-transform: translateY(10px);
     -moz-transform: translateY(10px);
     -o-transform: translateY(10px);
     transform: translateY(10px);
-    }  
+  }
 }
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h5 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
   font-family: "Bebas Neue" !important;
   font-weight: bold !important;
 }
 
-p, a, label, span, li {
+p,
+a,
+label,
+span,
+li {
   font-family: "Varta" !important;
 }
 
@@ -98,7 +110,7 @@ a {
 }
 
 .socialIconContainer {
-  flex-basis: 25%;
+  flex-basis: 20%;
   text-align: center;
   margin: auto;
 }
@@ -134,32 +146,26 @@ a {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 80%;
- 
-} 
 
-#outpostWithFlagSlide {
+}
+
+#mariano-slide {
   display: block;
-  background-image: url('/public/images/outpostWithFlag.jpg');
+  background-image: url('/public/images/Mariano_Rivera.JPG');
 }
 
-#olympicPadsSlide {
-  background-image: url('/public/images/olympicPads.jpg');
+#oswaldo-slide {
+  background-image: url('/public/images/Oswaldo_Cabrera.JPG');
 }
 
-#squatRacksSlide {
-  background-image: url('/public/images/squatRacks.jpg');
+#paul-oneil-slide {
+  background-image: url('/public/images/Paul_ONeill.jpg');
 }
 
-#turfSlide {
-  background-image: url('/public/images/turf.jpg');
+#elijah-slide {
+  background-image: url('/public/images/Elijah_Dunham.jpeg');
 }
 
-#smallOutpostSlide {
-  background-image: url('/public/images/smallOutpost.jpg');
+#boone-slide {
+  background-image: url('/public/images/boone_Johnny.jpg');
 }
-
-#largeOutpostSlide {
-  background-image: url('/public/images/largeOutpost.jpg');
-}
-
-

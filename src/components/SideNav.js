@@ -10,7 +10,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
-import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
+import EmailIcon from '@mui/icons-material/Email';
+
 export default function SideNav() {
     const [state, setState] = React.useState({
         left: false
@@ -58,10 +59,10 @@ export default function SideNav() {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <DirectionsRunIcon />
+                                <EmailIcon />
                             </ListItemIcon>
                             <ListItemText>
-                                Join
+                                Join Email List
                             </ListItemText>
                         </ListItemButton>
                     </ListItem>
@@ -77,7 +78,7 @@ export default function SideNav() {
                                 <ConnectWithoutContactIcon />
                             </ListItemIcon>
                             <ListItemText>
-                                Learn More
+                                Contact Frank
                             </ListItemText>
                         </ListItemButton>
                     </ListItem>

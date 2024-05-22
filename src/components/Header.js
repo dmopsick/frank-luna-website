@@ -36,7 +36,7 @@ export default function Header(props) {
                     <Toolbar className={classes.navBar}>
                         <SideNav />
                         <a className={classes.header} href ="/">
-                            Outpost Jersey Shore
+                            Frank Luna
                         </a>
                     </Toolbar>
                 </AppBar>
