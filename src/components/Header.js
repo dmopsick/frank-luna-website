@@ -28,29 +28,32 @@ export default function Header(props) {
     const classes = useStyles();
 
     return (
-     
+
         <React.Fragment>
             <CssBaseline />
             <HideOnScroll {...props}>
                 <AppBar>
                     <Toolbar className={classes.navBar}>
                         <SideNav />
-                        <a className={classes.header} href ="/">
+                        <a className={classes.header} href="/">
                             Frank Luna
                         </a>
+                        <img src="/logo192.png"
+                            alt="Frank Luna Logo"
+                            className='landing-page-logo'
+                        />
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>
 
         </React.Fragment>
-    
 
     )
 }
 
 export function HideOnScroll(props) {
-    const {children} = props;
-    
+    const { children } = props;
+
     const trigger = useScrollTrigger({
         target: window
     });

@@ -32,21 +32,13 @@ const useStyles = makeStyles(theme => ({
         zIndex: "100",
         position: "absolute",
         width: "100%",
-        top: "25%",
+        top: "65%",
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
         alignContent: "center",
-    },
-
-    landingPageLogo: {
-        width: "50%",
-        flexBasis: "20%",
-        maxHeight: "500px",
-        maxWidth: "250px",
-        opacity: "60%"
     }
-
+    
 }));
 
 export default function Home() {
@@ -82,11 +74,6 @@ export default function Home() {
                     <div className={classes.movingArrowContainer}>
 
                         <div class={classes.landingPageLogoContainer}>
-                            <img src="/logo1200.png"
-                                alt="Frank Luna Logo"
-                                className={classes.landingPageLogo}
-                            />
-
                             <Link to="section2"
                                 smooth={true}
                                 duration={500}
@@ -103,11 +90,6 @@ export default function Home() {
                 <div id="boone-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
                         <div class={classes.landingPageLogoContainer}>
-                            <img src="/logo1200.png"
-                                alt="Frank Luna Logo"
-                                className={classes.landingPageLogo}
-                            />
-
                             <Link to="section2"
                                 smooth={true}
                                 duration={500}
@@ -124,11 +106,6 @@ export default function Home() {
                 <div id="paul-oneil-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
                         <div class={classes.landingPageLogoContainer}>
-                            <img src="/logo1200.png"
-                                alt="Frank Luna Logo"
-                                className={classes.landingPageLogo}
-                            />
-
                             <Link to="section2"
                                 smooth={true}
                                 duration={500}
@@ -145,11 +122,6 @@ export default function Home() {
                 <div id="oswaldo-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
                         <div class={classes.landingPageLogoContainer}>
-                            <img src="/logo1200.png"
-                                alt="Frank Luna Logo"
-                                className={classes.landingPageLogo}
-                            />
-
                             <Link to="section2"
                                 smooth={true}
                                 duration={500}
@@ -166,11 +138,6 @@ export default function Home() {
                 <div id="elijah-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
                         <div class={classes.landingPageLogoContainer}>
-                            <img src="/logo1200.png"
-                                alt="Frank Luna Logo"
-                                className={classes.landingPageLogo}
-                            />
-
                             <Link to="section2"
                                 smooth={true}
                                 duration={500}

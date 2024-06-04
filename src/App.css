@@ -155,11 +155,11 @@ a {
 }
 
 #oswaldo-slide {
-  background-image: url('/public/images/Oswaldo_Cabrera.JPG');
+  background-image: url('/public/images/Oswaldo_Cabrera.png');
 }
 
 #paul-oneil-slide {
-  background-image: url('/public/images/Paul_ONeill.jpg');
+  background-image: url('/public/images/Paul_ONeill.png');
 }
 
 #elijah-slide {
@@ -167,5 +167,12 @@ a {
 }
 
 #boone-slide {
-  background-image: url('/public/images/boone_Johnny.jpg');
+  background-image: url('/public/images/Boone_Johnny.png');
+}
+
+.landing-page-logo {
+    width: 50%;
+    flex-basis: 20%;
+    max-width: 40px;
+    margin-left: 10px;
 }
