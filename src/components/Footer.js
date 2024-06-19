@@ -28,22 +28,6 @@ export default function Footer() {
                     <a className='socialIconLink'
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.youtube.com/channel/UChYupqDW91EDKfVHKZ-3-Eg">
-                        <YouTubeIcon fontSize='large' />
-                    </a>
-                </div>
-                <div className='socialIconContainer'>
-                    <a className='socialIconLink'
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://www.facebook.com/FrankLunaNJ/">
-                        <FacebookIcon fontSize='large' />
-                    </a>
-                </div>
-                <div className='socialIconContainer'>
-                    <a className='socialIconLink'
-                        target="_blank"
-                        rel="noreferrer"
                         href="https://www.instagram.com/franklunanj/">
                         <InstagramIcon fontSize='large' />
                     </a>
@@ -54,6 +38,22 @@ export default function Footer() {
                         rel="noreferrer"
                         href="https://x.com/franklunanj">
                         <TwitterIcon fontSize='large' />
+                    </a>
+                </div>
+                <div className='socialIconContainer'>
+                    <a className='socialIconLink'
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.youtube.com/channel/UChYupqDW91EDKfVHKZ-3-Eg">
+                        <YouTubeIcon fontSize='large' />
+                    </a>
+                </div>
+                <div className='socialIconContainer'>
+                    <a className='socialIconLink'
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.facebook.com/FrankLunaNJ/">
+                        <FacebookIcon fontSize='large' />
                     </a>
                 </div>
                 <div className='socialIconContainer'>

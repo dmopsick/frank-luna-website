@@ -9,7 +9,11 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
 export default function SideNav() {
@@ -53,7 +57,7 @@ export default function SideNav() {
                 </a>
 
                 <a className='linkNoDecoration'
-                     href="https://theoutpost.gymmasteronline.com/portal/signup"
+                     href="https://docs.google.com/forms/d/e/1FAIpQLSdrnMNrpZ3uC-2Y9h7rmdP386wjm9D1cKSdTkDypzc1Lw9QUg/viewform?usp=sf_link"
                      target="_blank"
                      rel="noreferrer">
                     <ListItem disablePadding>
@@ -69,16 +73,80 @@ export default function SideNav() {
                 </a>
 
                 <a className='linkNoDecoration' 
-                    href="https://forms.gle/ARkPTHWgBxu76Pny7"
+                    href="https://www.instagram.com/franklunanj/"
                     target="_blank"
                     rel="noreferrer">
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <ConnectWithoutContactIcon />
+                            <InstagramIcon />
                             </ListItemIcon>
                             <ListItemText>
-                                Contact Frank
+                                Instagram
+                            </ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                </a>
+
+                <a className='linkNoDecoration' 
+                    href="https://x.com/franklunanj"
+                    target="_blank"
+                    rel="noreferrer">
+                    <ListItem disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                            <TwitterIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                Twitter/X
+                            </ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                </a>
+
+                <a className='linkNoDecoration' 
+                    href="https://www.youtube.com/channel/UChYupqDW91EDKfVHKZ-3-Eg"
+                    target="_blank"
+                    rel="noreferrer">
+                    <ListItem disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                            <YouTubeIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                YouTube
+                            </ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                </a>
+
+                <a className='linkNoDecoration' 
+                    href="https://www.facebook.com/FrankLunaNJ/"
+                    target="_blank"
+                    rel="noreferrer">
+                    <ListItem disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                            <FacebookIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                Facebook
+                            </ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                </a>
+
+                <a className='linkNoDecoration' 
+                    href="https://www.linkedin.com/in/frank-luna-77809bb0/"
+                    target="_blank"
+                    rel="noreferrer">
+                    <ListItem disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                            <LinkedInIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                LinkedIn
                             </ListItemText>
                         </ListItemButton>
                     </ListItem>
