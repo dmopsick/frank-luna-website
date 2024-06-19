@@ -66,16 +66,6 @@ export default function Footer() {
                 </div>
             </div>
             <hr />
-            <p>
-                <a href="mailto:gardenstateperf@gmail.com"
-                    style={{
-                        color: "white"
-                    }}
-                >frank.luna23@gmail.com </a>
-                •
-                609-709-1656
-            </p>
-            <hr />
 
         </div>
     )
