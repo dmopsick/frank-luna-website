@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 const useStyles = makeStyles(theme => ({
     movingArrow: {
         animation: "arrow-jump 1s infinite",
-        color: "white"
+        color: "white",
     },
 
     homeContainer: {
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
         justifyContent: "center",
         alignContent: "center",
     }
-    
+
 }));
 
 export default function Home() {
@@ -171,24 +171,15 @@ export default function Home() {
                 </Link>
             </div>
 
-            <div id="training" className='section'>
+            <div id="training" className='short-section'>
                 <h1 className='sectionHeader'>Connect with Frank</h1>
 
                 <Button className='button'
                     target="_blank"
                     variant="contained"
                     size="large"
-                    href="https://theoutpost.gymmasteronline.com/portal/signup">
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdrnMNrpZ3uC-2Y9h7rmdP386wjm9D1cKSdTkDypzc1Lw9QUg/viewform?usp=sf_link">
                     Join Email List
-                </Button>
-
-                <Button className='button'
-                    target="_blank"
-
-                    variant="contained"
-                    size="large"
-                    href="https://forms.gle/ARkPTHWgBxu76Pny7">
-                    Contact Frank
                 </Button>
             </div>
         </div>

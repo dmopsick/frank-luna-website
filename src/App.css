@@ -68,6 +68,10 @@ li {
   text-align: center;
 }
 
+.short-section {
+  height: 600px;
+}
+
 .section {
   height: 850px;
 }
@@ -171,8 +175,8 @@ a {
 }
 
 .landing-page-logo {
-    width: 50%;
-    flex-basis: 20%;
-    max-width: 40px;
-    margin-left: 10px;
+  width: 50%;
+  flex-basis: 20%;
+  max-width: 40px;
+  margin-left: 10px;
 }
