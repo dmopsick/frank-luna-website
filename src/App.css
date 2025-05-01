@@ -153,6 +153,11 @@ a {
 
 }
 
+#judge-slide {
+  display: block;
+  background-image: url('/public/images/frank_aaron_judge.jpg');
+}
+
 #mariano-slide {
   display: block;
   background-image: url('/public/images/Mariano_Rivera.JPG');

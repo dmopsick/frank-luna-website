@@ -70,6 +70,23 @@ export default function Home() {
     return (
         <div className={classes.homeContainer}>
             <div className="section">
+                <div id="judge-slide" className='sectionWithBackgroundImage'>
+                    <div className={classes.movingArrowContainer}>
+
+                        <div class={classes.landingPageLogoContainer}>
+                            <Link to="section2"
+                                smooth={true}
+                                duration={500}
+                                style={{
+                                    color: "white",
+                                    flexBasis: "100%"
+                                }}>
+                                <ArrowDownwardIcon className={classes.movingArrow} style={{ fontSize: "96px" }} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="mariano-slide" className='sectionWithBackgroundImage'>
                     <div className={classes.movingArrowContainer}>
 
