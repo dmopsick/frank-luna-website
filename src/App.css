@@ -74,6 +74,8 @@ li {
 
 .section {
   height: 850px;
+  position: relative;
+  overflow: hidden;
 }
 
 .long-section {
@@ -143,22 +145,29 @@ a {
 /* Homepage slideshow */
 
 .section-with-background-image {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 825px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  opacity: 80%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
 
+.section-with-background-image.active {
+  opacity: 0.8;
+  pointer-events: auto;
 }
 
 #judge-slide {
-  display: block;
   background-image: url('/public/images/frank_aaron_judge.jpg');
 }
 
 #mariano-slide {
-  display: block;
   background-image: url('/public/images/Mariano_Rivera.JPG');
 }
 

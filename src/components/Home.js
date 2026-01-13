@@ -5,23 +5,73 @@ import Button from '@mui/material/Button';
 
 export default function Home() {
   useEffect(() => {
-    let myIndex = 1; // Holds place in the slideshow
+    // Preload all background images
+    const imageUrls = [
+      '/public/images/frank_aaron_judge.jpg',
+      '/public/images/Mariano_Rivera.JPG',
+      '/public/images/Oswaldo_Cabrera.png',
+      '/public/images/Paul_ONeill.png',
+      '/public/images/Elijah_Dunham.png',
+      '/public/images/Boone_Johnny.png',
+    ];
 
-    const backgroundSlider = setInterval(() => {
-      const x = document.querySelectorAll('.section-with-background-image');
+    const preloadImages = imageUrls.map((url) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = resolve;
+        img.onerror = reject;
+        img.src = url;
+      });
+    });
 
-      for (let i = 0; i < x.length; i++) {
-        x[i].style.display = 'none';
+    let myIndex = 1;
+    let backgroundSlider;
+
+    // Wait for all images to load before starting slideshow
+    Promise.all(preloadImages)
+        .then(() => {
+          const x = document.querySelectorAll('.section-with-background-image');
+          if (x.length === 0) return;
+
+          // Start with first slide visible
+          x[0].classList.add('active');
+
+          // Start slideshow after images are loaded
+          backgroundSlider = setInterval(() => {
+            // Remove active class from all slides
+            x.forEach((slide) => slide.classList.remove('active'));
+
+            myIndex++;
+            if (myIndex > x.length) {
+              myIndex = 1;
+            }
+
+            // Add active class to current slide
+            x[myIndex - 1].classList.add('active');
+          }, 3000);
+        })
+        .catch((error) => {
+          console.warn('Some images failed to load:', error);
+          // Start slideshow anyway if some images fail
+          const x = document.querySelectorAll('.section-with-background-image');
+          if (x.length > 0) {
+            x[0].classList.add('active');
+            backgroundSlider = setInterval(() => {
+              x.forEach((slide) => slide.classList.remove('active'));
+              myIndex++;
+              if (myIndex > x.length) {
+                myIndex = 1;
+              }
+              x[myIndex - 1].classList.add('active');
+            }, 3000);
+          }
+        });
+
+    return () => {
+      if (backgroundSlider) {
+        clearInterval(backgroundSlider);
       }
-      myIndex++;
-      if (myIndex > x.length) {
-        myIndex = 1;
-      }
-      // Hide previous
-      x[myIndex - 1].style.display = 'block';
-    }, 3000);
-
-    return () => clearInterval(backgroundSlider);
+    };
   }, []);
 
   return (
@@ -182,6 +232,7 @@ export default function Home() {
           className="button"
           target="_blank"
           variant="contained"
+          color="secondary"
           size="large"
           href="https://docs.google.com/forms/d/e/1FAIpQLSdrnMNrpZ3uC-2Y9h7rmdP386wjm9D1cKSdTkDypzc1Lw9QUg/viewform?usp=sf_link"
         >
