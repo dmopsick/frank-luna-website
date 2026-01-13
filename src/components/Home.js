@@ -1,205 +1,193 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import { makeStyles } from '@mui/styles';
-import { Link } from "react-scroll";
+import {Link} from 'react-scroll';
 import Button from '@mui/material/Button';
 
-const useStyles = makeStyles(theme => ({
-    movingArrow: {
-        animation: "arrow-jump 1s infinite",
-        color: "white",
-    },
-
-    homeContainer: {
-        color: "white",
-        background: "black",
-        textAlign: "center"
-    },
-
-    hoursLink: {
-        color: "skyblue",
-        fontSize: "32px",
-        margin: "auto"
-    },
-
-    testimonialText: {
-        margin: "auto",
-        width: "90%",
-        marginBottom: "20px"
-    },
-
-    landingPageLogoContainer: {
-        zIndex: "100",
-        position: "absolute",
-        width: "100%",
-        top: "65%",
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        alignContent: "center",
-    }
-
-}));
-
 export default function Home() {
-    const classes = useStyles();
+  useEffect(() => {
+    let myIndex = 1; // Holds place in the slideshow
 
-    useEffect(() => {
-        var myIndex = 1; // Holds place in the slideshow
+    const backgroundSlider = setInterval(() => {
+      const x = document.querySelectorAll('.section-with-background-image');
 
-        const backgroundSlider = setInterval(() => {
-            var i;
-            var x = document.querySelectorAll('.sectionWithBackgroundImage');
+      for (let i = 0; i < x.length; i++) {
+        x[i].style.display = 'none';
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1;
+      }
+      // Hide previous
+      x[myIndex - 1].style.display = 'block';
+    }, 3000);
 
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) {
-                myIndex = 1;
-            }
-            // Hide previous   
-            x[myIndex - 1].style.display = "block";
+    return () => clearInterval(backgroundSlider);
+  }, []);
 
-        }, 3000);
-
-
-        return () => clearInterval(backgroundSlider);
-    });
-
-    return (
-        <div className={classes.homeContainer}>
-            <div className="section">
-                <div id="judge-slide" className='sectionWithBackgroundImage'>
-                    <div className={classes.movingArrowContainer}>
-
-                        <div class={classes.landingPageLogoContainer}>
-                            <Link to="section2"
-                                smooth={true}
-                                duration={500}
-                                style={{
-                                    color: "white",
-                                    flexBasis: "100%"
-                                }}>
-                                <ArrowDownwardIcon className={classes.movingArrow} style={{ fontSize: "96px" }} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="mariano-slide" className='sectionWithBackgroundImage'>
-                    <div className={classes.movingArrowContainer}>
-
-                        <div class={classes.landingPageLogoContainer}>
-                            <Link to="section2"
-                                smooth={true}
-                                duration={500}
-                                style={{
-                                    color: "white",
-                                    flexBasis: "100%"
-                                }}>
-                                <ArrowDownwardIcon className={classes.movingArrow} style={{ fontSize: "96px" }} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="boone-slide" className='sectionWithBackgroundImage'>
-                    <div className={classes.movingArrowContainer}>
-                        <div class={classes.landingPageLogoContainer}>
-                            <Link to="section2"
-                                smooth={true}
-                                duration={500}
-                                style={{
-                                    color: "white",
-                                    flexBasis: "100%"
-                                }}>
-                                <ArrowDownwardIcon className={classes.movingArrow} style={{ fontSize: "96px" }} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="paul-oneil-slide" className='sectionWithBackgroundImage'>
-                    <div className={classes.movingArrowContainer}>
-                        <div class={classes.landingPageLogoContainer}>
-                            <Link to="section2"
-                                smooth={true}
-                                duration={500}
-                                style={{
-                                    color: "white",
-                                    flexBasis: "100%"
-                                }}>
-                                <ArrowDownwardIcon className={classes.movingArrow} style={{ fontSize: "96px" }} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="oswaldo-slide" className='sectionWithBackgroundImage'>
-                    <div className={classes.movingArrowContainer}>
-                        <div class={classes.landingPageLogoContainer}>
-                            <Link to="section2"
-                                smooth={true}
-                                duration={500}
-                                style={{
-                                    color: "white",
-                                    flexBasis: "100%"
-                                }}>
-                                <ArrowDownwardIcon className={classes.movingArrow} style={{ fontSize: "96px" }} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="elijah-slide" className='sectionWithBackgroundImage'>
-                    <div className={classes.movingArrowContainer}>
-                        <div class={classes.landingPageLogoContainer}>
-                            <Link to="section2"
-                                smooth={true}
-                                duration={500}
-                                style={{
-                                    color: "white",
-                                    flexBasis: "100%"
-                                }}>
-                                <ArrowDownwardIcon className={classes.movingArrow} style={{ fontSize: "96px" }} />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="section2" className='longSection'>
-                <h1 className='sectionHeader'>Meet Frank Luna</h1>
-                <p className='sectionCaption'>
-                    Frank Luna, who owns and operates Upstage Strategies LLC, has spent his entire adult life working on campaigns and building community.
-                    His career has included multiple successful political campaigns, a few years as an Infantryman in the Army National Guard, bartending along the Jersey Shore, partnering in Outpost Jersey Shore – a strength and conditioning facility in Monmouth County, and coordinating hundreds of thousands of dollars in successful events with professional athletes and public figures. Not only is Frank a successful public affairs professional, but he gives back to the community relentlessly, volunteering with Jersey Shore Dream Center, Covenant House New Jersey, and the New Jersey Vietnam Veterans’ Memorial Foundation. Frank has recently received awards and recognition from the Asbury Park Little League, Long Branch Little League, Court Appointed Special Advocates for Children (CASA) of Middlesex County, and the Vin Gopal Civic Association ("2022 Community Trailblazers Award").
-                </p>
-
-                <Link to="training"
-                    smooth={true}
-                    duration={500}
-                    style={{
-                        textDecoration: "none",
-                        color: "white"
-                    }}
-                >
-                    <h1>JOIN <ArrowDownwardIcon className={classes.movingArrow} fontSize="large" /></h1>
-                </Link>
-            </div>
-
-            <div id="training" className='short-section'>
-                <h1 className='sectionHeader'>Connect with Frank</h1>
-
-                <Button className='button'
-                    target="_blank"
-                    variant="contained"
-                    size="large"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdrnMNrpZ3uC-2Y9h7rmdP386wjm9D1cKSdTkDypzc1Lw9QUg/viewform?usp=sf_link">
-                    Join Email List
-                </Button>
-            </div>
+  return (
+    <div className="home-container">
+      <div className="section">
+        <div id="judge-slide" className="section-with-background-image">
+          <div className="landing-page-logo-container">
+            <Link
+              to="section2"
+              smooth={true}
+              duration={500}
+              style={{
+                color: 'white',
+                flexBasis: '100%',
+              }}>
+              <ArrowDownwardIcon
+                className="moving-arrow"
+                style={{fontSize: '96px'}}
+              />
+            </Link>
+          </div>
         </div>
 
-    )
+        <div id="mariano-slide" className="section-with-background-image">
+          <div className="landing-page-logo-container">
+            <Link
+              to="section2"
+              smooth={true}
+              duration={500}
+              style={{
+                color: 'white',
+                flexBasis: '100%',
+              }}>
+              <ArrowDownwardIcon
+                className="moving-arrow"
+                style={{fontSize: '96px'}}
+              />
+            </Link>
+          </div>
+        </div>
+
+        <div id="boone-slide" className="section-with-background-image">
+          <div className="landing-page-logo-container">
+            <Link
+              to="section2"
+              smooth={true}
+              duration={500}
+              style={{
+                color: 'white',
+                flexBasis: '100%',
+              }}>
+              <ArrowDownwardIcon
+                className="moving-arrow"
+                style={{fontSize: '96px'}}
+              />
+            </Link>
+          </div>
+        </div>
+
+        <div id="paul-oneil-slide" className="section-with-background-image">
+          <div className="landing-page-logo-container">
+            <Link
+              to="section2"
+              smooth={true}
+              duration={500}
+              style={{
+                color: 'white',
+                flexBasis: '100%',
+              }}>
+              <ArrowDownwardIcon
+                className="moving-arrow"
+                style={{fontSize: '96px'}}
+              />
+            </Link>
+          </div>
+        </div>
+
+        <div id="oswaldo-slide" className="section-with-background-image">
+          <div className="landing-page-logo-container">
+            <Link
+              to="section2"
+              smooth={true}
+              duration={500}
+              style={{
+                color: 'white',
+                flexBasis: '100%',
+              }}>
+              <ArrowDownwardIcon
+                className="moving-arrow"
+                style={{fontSize: '96px'}}
+              />
+            </Link>
+          </div>
+        </div>
+
+        <div id="elijah-slide" className="section-with-background-image">
+          <div className="landing-page-logo-container">
+            <Link
+              to="section2"
+              smooth={true}
+              duration={500}
+              style={{
+                color: 'white',
+                flexBasis: '100%',
+              }}>
+              <ArrowDownwardIcon
+                className="moving-arrow"
+                style={{fontSize: '96px'}}
+              />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div id="section2" className="long-section">
+        <h1 className="section-header">Meet Frank Luna</h1>
+        <p className="section-caption">
+          Frank Luna, who owns and operates Upstage Strategies LLC, has spent
+          his entire adult life working on campaigns and building community. His
+          career has included multiple successful political campaigns, a few years
+          as an Infantryman in the Army National Guard, bartending along the
+          Jersey Shore, partnering in Outpost Jersey Shore – a strength and
+          conditioning facility in Monmouth County, and coordinating hundreds of
+          thousands of dollars in successful events with professional athletes
+          and public figures. Not only is Frank a successful public affairs
+          professional, but he gives back to the community relentlessly,
+          volunteering with Jersey Shore Dream Center, Covenant House New Jersey,
+          and the New Jersey Vietnam Veterans&apos; Memorial Foundation. Frank has
+          recently received awards and recognition from the Asbury Park Little
+          League, Long Branch Little League, Court Appointed Special Advocates
+          for Children (CASA) of Middlesex County, and the Vin Gopal Civic
+          Association (&quot;2022 Community Trailblazers Award&quot;).
+        </p>
+
+        <Link
+          to="training"
+          smooth={true}
+          duration={500}
+          style={{
+            textDecoration: 'none',
+            color: 'white',
+          }}
+        >
+          <h1>
+            JOIN{' '}
+            <ArrowDownwardIcon
+              className="moving-arrow"
+              fontSize="large"
+            />
+          </h1>
+        </Link>
+      </div>
+
+      <div id="training" className="short-section">
+        <h1 className="section-header">Connect with Frank</h1>
+
+        <Button
+          className="button"
+          target="_blank"
+          variant="contained"
+          size="large"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdrnMNrpZ3uC-2Y9h7rmdP386wjm9D1cKSdTkDypzc1Lw9QUg/viewform?usp=sf_link"
+        >
+          Join Email List
+        </Button>
+      </div>
+    </div>
+  );
 }

@@ -34,32 +34,32 @@ li {
   font-family: "Varta" !important;
 }
 
-.infoList {
+.info-list {
   text-align: left;
   width: 85%;
   margin: auto;
   font-size: 18px;
 }
 
-.infoListItem {
+.info-list-item {
   margin-bottom: 5px;
 }
 
-.sectionHeader {
+.section-header {
   font-size: 48px;
   margin: auto;
   text-align: center;
   width: 96%;
 }
 
-.sectionSubheader {
+.section-subheader {
   font-size: 32px;
   margin: auto;
   text-align: center;
   width: 98%;
 }
 
-.sectionCaption {
+.section-caption {
   font-size: 22px;
   width: 90%;
   margin: auto;
@@ -76,16 +76,16 @@ li {
   height: 850px;
 }
 
-.longSection {
+.long-section {
   height: 1200px;
 }
 
-.bodyText {
+.body-text {
   margin: auto;
   width: 85%;
 }
 
-.largeBodyText {
+.large-body-text {
   margin: auto;
   width: 85%;
   font-size: 17px;
@@ -95,55 +95,54 @@ a {
   color: skyblue
 }
 
-.pageContainer {
+.page-container {
   padding-top: 100px;
   color: white;
 }
 
-.redBackground {
+.red-background {
   background-color: #a7171a;
 }
 
-.linkNoDecoration {
+.link-no-decoration {
   color: rgb(0, 0, 0, 0.87);
   text-decoration: none;
 }
 
-.centerText {
+.center-text {
   text-align: center;
 }
 
-.socialIconContainer {
+.social-icon-container {
   flex-basis: 20%;
   text-align: center;
   margin: auto;
 }
 
-.socialIconLink {
+.social-icon-link {
   color: white;
 }
 
-.marginTop {
+.margin-top {
   margin-top: 25px;
 }
 
-.marginBottom {
+.margin-bottom {
   margin-bottom: 25px;
 }
 
-.paddingBottom {
+.padding-bottom {
   padding-bottom: 55px;
 }
 
 .button {
   font-size: 2rem !important;
   margin: 50px !important;
-  /* background-color: #a7171a !important; */
 }
 
 /* Homepage slideshow */
 
-.sectionWithBackgroundImage {
+.section-with-background-image {
   display: none;
   height: 825px;
   background-size: cover;
@@ -184,4 +183,27 @@ a {
   flex-basis: 20%;
   max-width: 40px;
   margin-left: 10px;
+}
+
+/* Home component styles */
+.home-container {
+  color: white;
+  background: black;
+  text-align: center;
+}
+
+.moving-arrow {
+  animation: arrow-jump 1s infinite;
+  color: white;
+}
+
+.landing-page-logo-container {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  top: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
